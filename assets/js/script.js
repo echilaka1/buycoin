@@ -48,7 +48,7 @@ const baseUrl = "https://api.github.com/graphql";
 
 const headers = {
   "Content-Type": "application/json",
-  Authorization: "bearer " + "44e9fb22d6efc83df4ce178ea9d7698cd957a225",
+  Authorization: "bearer " + "674081bc4938ec4a41199519f43fd4d807c8564d",
 };
 
 fetch(baseUrl, {
@@ -58,7 +58,27 @@ fetch(baseUrl, {
 })
   .then((res) => res.json())
   .then((data) => {
-    console.log("All Results", data.data);
+    const str = data.data.user.url;
+    const userUrl = str.split("/").pop();
+    const allrepo = document.querySelector("#repos");
+    const totalsearchrepocount = data.data.user.repositories.nodes.length;
+    document.querySelector(".profile-name").textContent = data.data.user.name;
+    document.querySelector(".user-bio").textContent = data.data.user.bio;
+    document.querySelector(".user-name").textContent = userUrl;
+    document.querySelector(".user-image").src = data.data.user.avatarUrl;
+    document.querySelector(".profile-image").src = data.data.user.avatarUrl;
+    document.querySelector(".total-repo").textContent =
+      data.data.user.repositories.totalCount;
+    document.querySelector(".e-status").innerHTML =
+      data.data.user.status.emojiHTML;
+    document.querySelector(".search-repo").textContent = totalsearchrepocount;
+
+    data.data.user.repositories.nodes.forEach((repo) => {
+      document.querySelector(".repo-names").textContent = repo.name;                              
+      console.log("name: " + repo.name);
+    });
+
+    console.log("All Results", data.data.user.repositories.nodes);
   })
 
-  .catch((err) => console.log(JSON.stringify(err)));
+  .catch((error) => console.error("Fetch Error:", error));

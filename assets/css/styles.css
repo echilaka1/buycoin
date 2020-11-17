@@ -321,6 +321,19 @@ input::-webkit-input-placeholder {
   z-index: 99;
 }
 
+.e-status {
+  position: absolute;
+  bottom: 15%;
+  left: 75%;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  background-color: #fff5b1;
+  border: 1px solid #f9c513;
+  border-radius: 50%;
+  padding: 6px 8px;
+}
+
 .repo-header {
   position: relative;
   padding-top: 30px;
@@ -362,9 +375,9 @@ input::-webkit-input-placeholder {
 }
 
 .total-repo {
-  border-radius:30px;
-  padding:4px 15px;
-  background-color:#edeff2 ;
+  border-radius: 30px;
+  padding: 4px 15px;
+  background-color: #edeff2;
 }
 
 #content34,
@@ -487,6 +500,12 @@ input::-webkit-input-placeholder {
   font-weight: 600;
   font-size: 20px;
   color: #0366d6;
+}
+
+.repo-desc {
+  color:#586069;
+  font-size: 14px;
+  font-weight: normal;
 }
 
 .repo-star {
