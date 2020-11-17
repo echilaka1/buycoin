@@ -486,7 +486,7 @@ input::-webkit-input-placeholder {
   color: black;
   font-size: 14px;
   border-bottom: 1px solid#e1e4e8;
-  max-width: 230px;
+  max-width: 220px;
   line-height: 3;
 }
 
