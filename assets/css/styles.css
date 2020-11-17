@@ -11,13 +11,6 @@ body {
   font-style: normal;
 }
 
-@font-face {
-  font-family: "Segoe UI Bold";
-  src: url("../fonts/Segoe UI Bold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 body {
   font-family: "Segoe UI", sans-serif;
   font-size: 1rem;
@@ -267,7 +260,7 @@ input::-webkit-search-cancel-button {
 }
 
 input[type="search"] {
-  background: #24292e url(search-key-slash.svg) no-repeat 245px center;
+  background: #24292e url(../img/search-key-slash.svg) no-repeat 245px center;
   font-size: inherit;
   font-weight: 400;
   color: white;
@@ -303,7 +296,7 @@ input[type="search"] {
 
 input[type="search"]:focus {
   width: 500px;
-  background: #fafbfc url(search-key-slash.svg) no-repeat 495px center;
+  background: #fafbfc url(../img/search-key-slash.svg) no-repeat 495px center;
   background-color: #fafbfc;
   border-color: #e1e4e8;
   color: black;
