@@ -117,7 +117,7 @@ fetch(baseUrl, {
 
     let therepos = "";
     data.data.user.repositories.nodes.forEach((repo) => {
-      const x1 = alphabeticFormat(repo.updatedAt);
+      const updatedDate = alphabeticFormat(repo.updatedAt);
       therepos += `<div class="row" style="border-bottom: 1px solid #e1e4e8;">
       <div class="col-6 col-s-6">
         <h1 class="repo-names">${repo.name}</h1>
@@ -157,7 +157,7 @@ fetch(baseUrl, {
           </svg>&nbsp; ${repo.forks.totalCount}
         </span>
 
-        <span class="programmingLanguage">Updated on ${x1}</span>
+        <span class="programmingLanguage">Updated on ${updatedDate}</span>
       </div>
       <div class="col-6 col-s-6">
         <div class="repo-star text-right">
