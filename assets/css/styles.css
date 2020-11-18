@@ -33,6 +33,19 @@ svg:not(:root) {
 .text-right {
   float: right !important;
 }
+.text-left {
+  float: left !important;
+}
+
+.clear-float {
+  overflow: auto;
+}
+
+.clear-float::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 img {
   max-width: 100%;
@@ -143,7 +156,7 @@ img {
   }
   .Navbar__Items {
     display: none;
-    align-items:baseline;
+    align-items: baseline;
   }
   .Navbar__Items--right {
     margin-left: 0;
@@ -427,6 +440,7 @@ input::-webkit-input-placeholder {
   color: #586069;
   font-size: 14px;
   font-weight: normal;
+  max-width:400px;
 }
 
 .repo-star {
