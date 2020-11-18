@@ -61,7 +61,7 @@ img {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  flex: 30%;
+  flex: 25%;
   padding: 20px 30px 20px 70px;
 }
 
@@ -73,15 +73,9 @@ img {
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
-  .row {
-    flex-direction: column;
-  }
-
-  .side {
-    padding: 20px;
-  }
-
+  .side,
   .main {
+    flex: 100%;
     padding: 20px;
   }
 }
@@ -270,11 +264,24 @@ input::-webkit-input-placeholder {
   height: 260px;
 }
 
+@media only screen and (max-width:1024px) {
+  .user-image {
+    width:80px;
+    height:80px;
+  }
+}
+
 .profile-name {
   font-size: 26px;
   line-height: 1px;
   font-weight: 600;
   color: black;
+}
+
+@media only screen and (max-width:1024px) {
+  .profile-name {
+    font-size: 18px;
+  }
 }
 
 .user-name {
@@ -440,7 +447,7 @@ input::-webkit-input-placeholder {
   color: #586069;
   font-size: 14px;
   font-weight: normal;
-  max-width:400px;
+  max-width: 400px;
 }
 
 .repo-star {
