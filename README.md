@@ -1,5 +1,7 @@
 # BUYCOINS FRONTEND ENGINEER TEST
 
+BUYCOINS FRONTEND ENGINEER TEST
+
 Visit TEST URL (https://buycoin-github-ui.netlify.app/) to see the live version of the test.
 
 ## Coding Challenge

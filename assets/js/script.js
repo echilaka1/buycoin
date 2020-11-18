@@ -52,11 +52,12 @@ const alphabeticFormat = (date) => {
 };
 
 const myToken = config.TOKEN;
+const myUser = config.USER_NAME;
 
 const body = {
   query: `
       query { 
-        user(login: "echilaka1") {
+        user(login: "${myUser}") {
           avatarUrl
           bio
           name
