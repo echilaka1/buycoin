@@ -121,11 +121,11 @@ fetch(baseUrl, {
       therepos += `<div style="border-bottom: 1px solid #e1e4e8;">
       <div>
         <div class="clear-float">
-          <div class="text-left">
+          <span class="text-left">
             <h1 class="repo-names">${repo.name}</h1>
-          </div>
+          </span>
           <div>
-            <div class="repo-star text-right">
+            <span class="repo-star text-right">
               <svg
                 class="octicon-star v-align-middle"
                 viewBox="0 0 16 16"
@@ -140,7 +140,7 @@ fetch(baseUrl, {
                 >
                 </path>
               </svg>&nbsp; Star
-            </div>
+            </span>
           </div>
         </div>
         
