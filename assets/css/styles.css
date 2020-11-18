@@ -72,7 +72,7 @@ img {
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .side,
   .main {
     flex: 100%;
@@ -264,10 +264,10 @@ input::-webkit-input-placeholder {
   height: 260px;
 }
 
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width: 1024px) {
   .user-image {
-    width:80px;
-    height:80px;
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -278,7 +278,7 @@ input::-webkit-input-placeholder {
   color: black;
 }
 
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width: 1024px) {
   .profile-name {
     font-size: 18px;
   }
@@ -403,12 +403,12 @@ input::-webkit-input-placeholder {
   display: block;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1024px) {
   .overview,
   .repositories,
   .projects,
   .packages {
-    padding: 10px 15px;
+    padding: 10px 10px;
   }
 }
 
@@ -433,8 +433,8 @@ input::-webkit-input-placeholder {
   color: black;
   font-size: 14px;
   border-bottom: 1px solid#e1e4e8;
-  max-width: 220px;
-  line-height: 3;
+  max-width: 210px;
+  line-height: 2;
 }
 
 .repo-names {
@@ -447,7 +447,7 @@ input::-webkit-input-placeholder {
   color: #586069;
   font-size: 14px;
   font-weight: normal;
-  max-width: 400px;
+  max-width: 500px;
 }
 
 .repo-star {
