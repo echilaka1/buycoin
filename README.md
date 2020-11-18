@@ -4,6 +4,22 @@ BUYCOINS FRONTEND ENGINEER TEST
 
 Visit TEST URL (https://buycoin-github-ui.netlify.app/) to see the live version of the test.
 
+## How to stup your API key and username ##
+
+After creating API
+
+create a config.js on the root folder
+
+In the config file, enter your API key and username. You don't need any other code in this file:
+
+var config = {
+  TOKEN: "12345",
+  USER_NAME: "ire1234",
+};
+
+Once this is done you should be able to see the dynamic areas of the UI feeding from Github Graphql
+
+
 ## Coding Challenge
 
 Using the GraphQL GitHub API (https://developer.github.com/v4/explorer/), recreate your github profile page (the tab that lists your repositories). 

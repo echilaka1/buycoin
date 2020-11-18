@@ -149,8 +149,8 @@ fetch(baseUrl, {
         </div>
         
         <p class="repo-desc">${repo.description}</p>
-        <span class="repo-language-color" style="background-color: #563d7c"></span>
-        <span class="programmingLanguage">CSS</span>
+        <span class="repo-language-color" style="background-color: ${repo.primaryLanguage ? repo.primaryLanguage.color : "#563d7c"}"></span>
+        <span class="programmingLanguage">${repo.primaryLanguage ? repo.primaryLanguage.name : "CSS"}</span>
         <span class="programmingLanguage">
           <svg
             class="octicon-star v-align-middle"
