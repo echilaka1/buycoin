@@ -118,8 +118,8 @@ fetch(baseUrl, {
     let therepos = "";
     data.data.user.repositories.nodes.forEach((repo) => {
       const updatedDate = alphabeticFormat(repo.updatedAt);
-      therepos += `<div class="row" style="border-bottom: 1px solid #e1e4e8;">
-      <div class="col-6 col-s-6">
+      therepos += `<div style="border-bottom: 1px solid #e1e4e8;">
+      <div>
         <h1 class="repo-names">${repo.name}</h1>
         <p class="repo-desc">${repo.description}</p>
         <span class="repo-language-color" style="background-color: #563d7c"></span>
@@ -159,7 +159,7 @@ fetch(baseUrl, {
 
         <span class="programmingLanguage">Updated on ${updatedDate}</span>
       </div>
-      <div class="col-6 col-s-6">
+      <div>
         <div class="repo-star text-right">
           <svg
             class="octicon-star v-align-middle"
