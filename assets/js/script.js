@@ -107,6 +107,7 @@ fetch(baseUrl, {
     document.querySelector(".profile-name").textContent = data.data.user.name;
     document.querySelector(".user-bio").textContent = data.data.user.bio;
     document.querySelector(".user-name").textContent = userUrl;
+    document.querySelector("#user-na").textContent = userUrl;
     document.querySelector(".user-image").src = data.data.user.avatarUrl;
     document.querySelector(".profile-image").src = data.data.user.avatarUrl;
     document.querySelector(".total-repo").textContent =
@@ -190,8 +191,6 @@ fetch(baseUrl, {
     console.log("user details", data.data.user.repositories.nodes);
 
     document.querySelector("#repos").innerHTML = therepos;
-
-    console.log("All Results", data.data.user);
   })
 
   .catch((error) => {
