@@ -51,6 +51,8 @@ const alphabeticFormat = (date) => {
   return `${day} ${monthNames[monthIndex]}`;
 };
 
+const myToken = config.TOKEN;
+
 const body = {
   query: `
       query { 
@@ -91,7 +93,7 @@ const baseUrl = "https://api.github.com/graphql";
 
 const headers = {
   "Content-Type": "application/json",
-  Authorization: "bearer " + "674081bc4938ec4a41199519f43fd4d807c8564d",
+  Authorization: "bearer " + myToken,
 };
 
 fetch(baseUrl, {
