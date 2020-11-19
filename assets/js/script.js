@@ -1,3 +1,6 @@
+
+//Navbar Toggle
+
 const classToggle = () => {
   const navs = document.querySelectorAll(".Navbar__Items");
 
@@ -8,6 +11,7 @@ document
   .querySelector(".Navbar__Link-toggle")
   .addEventListener("click", classToggle);
 
+//function that converts date and time
 const alphabeticFormat = (date) => {
   if (!date) return;
   let zeroTime = false;
@@ -51,9 +55,11 @@ const alphabeticFormat = (date) => {
   return `${day} ${monthNames[monthIndex]}`;
 };
 
+// constants that takes in your token and username you defined in config.js
 const myToken = config.TOKEN;
 const myUser = config.USER_NAME;
 
+// api query string
 const body = {
   query: `
       query { 
@@ -105,7 +111,10 @@ fetch(baseUrl, {
   .then((res) => res.json())
   .then((data) => {
     const str = data.data.user.url;
+
+    //slice URL to get username
     const userUrl = str.split("/").pop();
+
     const totalsearchrepocount = data.data.user.repositories.nodes.length;
     document.querySelector(".profile-name").textContent = data.data.user.name;
     document.querySelector(".user-bio").textContent = data.data.user.bio;
@@ -120,6 +129,7 @@ fetch(baseUrl, {
     document.querySelector(".search-repo").textContent = totalsearchrepocount;
 
     let therepos = "";
+
     data.data.user.repositories.nodes.forEach((repo) => {
       const updatedDate = alphabeticFormat(repo.updatedAt);
       therepos += `<div style="border-bottom: 1px solid #e1e4e8;">
@@ -148,7 +158,11 @@ fetch(baseUrl, {
           </div>
         </div>
         
-        <p class="repo-desc">${repo.description ? repo.description : "No description, website, or topics provided." }</p>
+        <p class="repo-desc">${
+          repo.description
+            ? repo.description
+            : "No description, website, or topics provided."
+        }</p>
         <span class="repo-language-color" style="background-color: ${
           repo.primaryLanguage ? repo.primaryLanguage.color : "#563d7c"
         }"></span>
