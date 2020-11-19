@@ -148,7 +148,7 @@ fetch(baseUrl, {
           </div>
         </div>
         
-        <p class="repo-desc">${repo.description}</p>
+        <p class="repo-desc">${repo.description ? repo.description : "No description, website, or topics provided." }</p>
         <span class="repo-language-color" style="background-color: ${
           repo.primaryLanguage ? repo.primaryLanguage.color : "#563d7c"
         }"></span>
