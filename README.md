@@ -1,6 +1,6 @@
 # BUYCOINS FRONTEND ENGINEER TEST
 
-Visit TEST URL (https://buycoin-github-ui.netlify.app/) to see the live version of the test.
+Visit TEST URL (https://buycoins-github-ui.netlify.app/) to see the live version of the test.
 
 ## How to setup your API key and username ##
 
