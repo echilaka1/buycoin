@@ -1,4 +1,3 @@
-
 //Navbar Toggle
 
 const classToggle = () => {
@@ -125,6 +124,8 @@ fetch(baseUrl, {
     document.querySelector(".total-repo").textContent =
       data.data.user.repositories.totalCount;
     document.querySelector(".e-status").innerHTML =
+      data.data.user.status.emojiHTML;
+    document.querySelector(".e-status-mm").innerHTML =
       data.data.user.status.emojiHTML;
     document.querySelector(".search-repo").textContent = totalsearchrepocount;
 

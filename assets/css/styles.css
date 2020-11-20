@@ -363,6 +363,17 @@ input::-webkit-input-placeholder {
   padding: 6px 8px;
 }
 
+.e-status-m {
+  background-color: #fff5b1;
+  border: 1px solid #f9c513;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.e-status-mm div {
+  display:inline;
+}
+
 .repo-header {
   position: relative;
   padding-top: 30px;
@@ -385,6 +396,21 @@ input::-webkit-input-placeholder {
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .bordr-repo {
     top: 292px;
+  }
+}
+
+@media (max-width: 800px) {
+  .change-view {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .flex-item-left {
+    flex: 30%;
+  }
+  
+  .flex-item-right {
+    flex: 70%;
   }
 }
 
@@ -488,9 +514,7 @@ input::-webkit-input-placeholder {
 .repositories:hover,
 .projects:hover,
 .packages:hover {
-  color: black;
-  font-weight: bold;
-  border-bottom: 2px solid #f9826c;
+  border-bottom: 2px solid #eaecef;
   cursor: pointer;
 }
 
@@ -501,15 +525,15 @@ input::-webkit-input-placeholder {
   border-bottom: 2px solid #f9826c;
 }
 
-#overview:checked + .octicon-book {
-  opacity: 1;
-}
-
 #repositories:checked + .repositories {
   color: black;
   border: none;
   font-weight: bold;
   border-bottom: 2px solid #f9826c;
+}
+
+#repositories:checked + .repositories .octicon-repo {
+  opacity: 1;
 }
 
 #projects:checked + .projects {
