@@ -112,6 +112,7 @@ img {
 .octicon {
   display: inline-block;
   fill: white;
+  vertical-align: middle;
 }
 
 .octicon-book {
@@ -312,9 +313,10 @@ input::-webkit-input-placeholder {
 
 .profile-image {
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  display: inline;
+    width: 20px;
+    vertical-align: middle;
+    height: 20px;
+    display: inline;
 }
 
 .image-cover {
