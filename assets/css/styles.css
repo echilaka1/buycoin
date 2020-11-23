@@ -19,8 +19,15 @@ body {
   background-color: white;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+h1,
+h2 {
+  margin-bottom: 0;
 }
 
 svg:not(:root) {
@@ -371,7 +378,7 @@ input::-webkit-input-placeholder {
 }
 
 .e-status-mm div {
-  display:inline;
+  display: inline;
 }
 
 .repo-header {
@@ -408,7 +415,7 @@ input::-webkit-input-placeholder {
   .flex-item-left {
     flex: 30%;
   }
-  
+
   .flex-item-right {
     flex: 70%;
   }
