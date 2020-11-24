@@ -402,7 +402,7 @@ input::-webkit-input-placeholder {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .bordr-repo {
-    display:none;
+    display: none;
   }
 }
 
@@ -475,18 +475,9 @@ input::-webkit-input-placeholder {
   padding: 10px 0;
 }
 
-#overview {
-  display: none;
-}
-
-#repositories {
-  display: none;
-}
-
-#projects {
-  display: none;
-}
-
+#overview,
+#repositories,
+#projects,
 #packages {
   display: none;
 }
@@ -569,7 +560,7 @@ input::-webkit-input-placeholder {
   .repositories,
   .projects,
   .packages {
-    padding: 10px 02px;
+    padding: 8px 02px;
     text-align: left;
   }
 }
